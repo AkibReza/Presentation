@@ -1,0 +1,103 @@
+:root{
+  --page-1-color: #333;
+  --page-2-color: tan;
+  --page-3-color: #4d9900;
+  --page-4-color: red;
+  --animate-speed: 0.5s;
+}
+
+body{
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.4;
+  color: white;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+
+#page-1{background-color: var(--page-1-color);}
+#page-2{background-color: var(--page-2-color);}
+#page-3{background-color: var(--page-3-color);}
+#page-4{background-color: var(--page-4-color);}
+
+.page{
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  align-items: center;
+  justify-content: center; 
+  padding: 20px;
+  text-align: center;
+  
+}
+
+.page h1{
+  font-size: 4rem;
+  line-height: 1.2;
+  margin: 1rem ;
+}
+
+.page p {
+  font-size: 1.3rem;
+}
+
+.btn{
+  display: inline-block;
+  padding:1rem 2rem;
+  background: #99e6ff;
+  color: #333;
+  text-decoration: none;
+  border: none;
+  margin-top: 1rem;
+  font-size: 1.1rem;
+  transition: all 0.3s ease-in-out;
+  margin: 0px 2rem;
+}
+
+.btn:hover{
+  background-color: #333;
+  color: #99FF99;
+}
+
+.btn-dark{
+  color: #99FF99;
+  background-color: #333; 
+}
+
+.btn-dark:hover{
+  color: #000000;
+  background-color:#99e6ff ;
+}
+
+h1{
+  text-shadow: 3px 3px 3px black;
+}
+
+#page-1 h1{
+  transform: translateY(-1000px);
+  animation: heading var(--animate-speed) forwards ease-in;
+}
+
+#page-1 p{
+  transform: translateX(-1500px);
+  animation: text var(--animate-speed) forwards ease-in 1s;
+}
+
+#page-2{background: url('./87205.jpg') center center/cover;}
+#page-3{background: url('./Desktop-night-wallpaper.jpg');}
+#page-4{
+  background: url('./82883909_1748314328636031_6407935624736669696_o.jpg') center center/cover;
+}
+
+
+@keyframes heading {
+  to{
+    transform: translateY(0px)
+  }
+}
+@keyframes text {
+  to{
+    transform: translateX(0px)
+  }
+}
